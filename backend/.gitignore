@@ -1,1 +1,36 @@
+# Bytecode
+__pycache__/
+*.pyc
 
+# Virtual Environment
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# Environment
+.env
+
+# Python
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs
+logs/
+*.log
+
+# Build
+build/
+dist/
+
+# Database
+*.db
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
