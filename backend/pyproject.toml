@@ -1,1 +1,27 @@
+[project]
+name = "recruiters-ai-copilot"
+version = "0.1.0"
+description = "AI-powered Recruiter's Copilot built with FastAPI."
+authors = [
+    { name = "Akhilesh Tiwari" }
+]
+readme = "README.md"
+requires-python = ">=3.11"
 
+dependencies = []
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+asyncio_mode = "auto"
+
+[build-system]
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
