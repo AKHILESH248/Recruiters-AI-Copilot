@@ -1,0 +1,3 @@
+"""
+Candidate API endpoints.
+"""
