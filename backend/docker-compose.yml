@@ -1,1 +1,45 @@
+version: "3.9"
 
+services:
+
+  backend:
+
+    build: .
+
+    container_name: recruiter-ai-backend
+
+    env_file:
+      - .env
+
+    ports:
+      - "8000:8000"
+
+    volumes:
+      - .:/app
+
+    depends_on:
+      - postgres
+      - redis
+
+  postgres:
+
+    image: postgres:16
+
+    restart: always
+
+    environment:
+      POSTGRES_DB: recruiter_ai
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+    ports:
+      - "5432:5432"
+
+  redis:
+
+    image: redis:7-alpine
+
+    restart: always
+
+    ports:
+      - "6379:6379"
