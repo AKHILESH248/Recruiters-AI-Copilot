@@ -7,9 +7,12 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     APP_NAME: str = "Recruiter's AI Copilot"
+
     API_V1_STR: str = "/api/v1"
 
     DEBUG: bool = True
+
+    DATABASE_URL: str = "sqlite:///./recruiters_ai_copilot.db"
 
     OPENAI_API_KEY: str = ""
 
